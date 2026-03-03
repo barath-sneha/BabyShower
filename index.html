@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Baby Shower Invitation</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(135deg,#fffaf0,#fef6e4);
+  color:#2c2c2c;
+  overflow-x:hidden;
+}
+
+.photo-section{margin:20px auto;z-index:1;position:relative}
+.photo-section img{width:180px;height:180px;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.1)}
+
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px;
+}
+
+    /* petals */
+    .petal{position:fixed;top:-10%;background:url('RedPet.png') no-repeat center/contain;width:28px;height:28px;opacity:0.8;animation:fall linear forwards;z-index:0}
+    @keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+
+    .petal {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: radial-gradient(circle at 30% 30%, #fff6f7 10%, #c9a227 60%);
+      opacity: 0.9;
+      border-radius: 60% 40% 50% 50%;
+      pointer-events: none;
+      animation: fall 10s linear infinite;
+    }
+
+    /* Individual petal variations */
+    .p1 { left: 20%; top: -5%; animation-duration: 9s; transform: rotate(10deg); }
+    .p2 { left: 45%; top: -8%; animation-duration: 11s; transform: rotate(40deg); }
+    .p3 { left: 70%; top: -3%; animation-duration: 12s; transform: rotate(-20deg); }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+      50% { opacity: 0.9; }
+      100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+    }
+
+
+    /* QR section */
+    .qr-section{margin:30px auto;z-index:1;position:relative}
+    .qr-section img{width:120px;height:120px}
+
+/* Picture */
+    @media(max-width:768px){
+      h1.names{font-size:2.4rem}
+      .card{padding:24px}
+      .photo-section img{width:140px;height:140px}
+    }
+    @media(max-width:480px){
+      h1.names{font-size:2rem}
+      h2{font-size:.9rem}
+      p{font-size:.9rem}
+      .btn{width:100%;text-align:center}
+    }
+/* End Picture */
+
+/* ===== Countdown Section ===== */
+
+.countdown-wrapper {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.countdown-title {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #c9a227;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cd-box {
+  background: #fff9f7;
+  border: 1px solid #e2d4cf;
+  border-radius: 14px;
+  padding: 14px 20px;
+  min-width: 80px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.cd-box:hover {
+  transform: translateY(-4px);
+}
+
+.cd-number {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #c9a227;
+}
+
+.cd-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* ===== Countdown Section ===== */
+
+.card{
+  background:
+  linear-gradient(145deg, rgba(255,250,240,0.95), rgba(255,245,225,0.95)),
+  url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200');
+  background-size:cover;
+  background-position:center;
+  border-radius:24px;
+  padding:40px;
+  box-shadow:0 12px 40px rgba(0,0,0,0.15);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+h1.names{
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
+  color:#c9a227;
+  margin:20px 0 10px;
+}
+
+h2{
+  font-size:1rem;
+  font-weight:600;
+  color:#7c5a4d;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+p{
+  line-height:1.7;
+  margin:12px 0;
+}
+
+.divider{
+  width:80px;
+  height:3px;
+  background:linear-gradient(90deg,#c9a227,#e6c77d);
+  margin:20px auto;
+  border-radius:2px;
+}
+
+.detail-box{
+  border:1px solid #e2d4cf;
+  padding:16px;
+  border-radius:14px;
+  background:#fff9f0;
+  box-shadow:0 4px 16px rgba(0,0,0,0.06);
+  transition:.3s;
+}
+
+.detail-box:hover{
+  transform:translateY(-4px);
+}
+
+.detail-box strong{
+  display:block;
+  color:#c9a227;
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.details{
+  margin-top:22px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.btn{
+  background:#c9a227;
+  color:white;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 6px 20px rgba(201,162,39,0.4);
+  transition:.3s;
+  display:inline-block;
+}
+
+.btn:hover{
+  background:#b68d1f;
+  transform:translateY(-2px);
+}
+
+.footer{
+  margin-top:32px;
+  font-size:.95rem;
+  font-style:italic;
+  color:#6b5650;
+}
+
+/* Envelope */
+.envelope-screen{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#fff,#f9f9f9);
+  z-index:100;
+  transition:opacity 1s ease;
+}
+
+.envelope{
+  position:relative;
+  width:280px;
+  height:200px;
+  background:#fff;
+  border:2px solid #ddd;
+  border-radius:8px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.flap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:55%;
+  background:linear-gradient(180deg,#fff,#f0f0f0);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top;
+  transition:transform 1s ease;
+}
+
+.open .flap{
+  transform:rotateX(180deg);
+}
+
+.message{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Great Vibes',cursive;
+  font-size:1.8rem;
+  color:#c9a227;
+}
+
+.fade-out{
+  opacity:0;
+  pointer-events:none;
+}
+
+/* Floating Teddy */
+@keyframes float{
+  0%{transform:translateY(-10vh) rotate(0deg);opacity:1;}
+  100%{transform:translateY(120vh) rotate(360deg);opacity:0;}
+}
+
+.teddy{
+  position:fixed;
+  font-size:22px;
+  pointer-events:none;
+  animation:float linear infinite;
+}
+
+@media(max-width:768px){
+  h1.names{font-size:2.2rem;}
+  .card{padding:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Envelope Intro -->
+<div class="envelope-screen" id="envelopeScreen">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="message">👶 Tap to Reveal</div>
+  </div>
+</div>
+
+<main class="container hidden" id="inviteCard">
+  <div class="card">
+
+    <h2>With Love & Joy</h2>
+    <h1 class="names">Welcoming Our Little Miracle</h1>
+    <div class="divider"></div>
+
+    <p>
+      We are overjoyed to invite you to celebrate the upcoming arrival of our precious baby.
+      Join us for a heartwarming Baby Shower filled with blessings, laughter, and sweet memories.
+    </p>
+<br>
+      <strong style="color: #c9a227;">Hosted with love by</strong>
+      <h1 class="names">Barath & Sneha</h1>
+
+    <div class="photo-section" >
+        <img src="Bump.png" alt="Couple Photo" class="mx-auto">
+    </div>
+
+    <!-- Countdown -->
+     <!-- ===== Baby Shower Countdown Section ===== -->
+<section id="baby-countdown-section" class="countdown-wrapper">
+  <div class="countdown-container">
+    <div class="cd-box">
+      <div id="cd-days" class="cd-number">--</div>
+      <div class="cd-label">Days</div>
+    </div>
+
+    <div class="cd-box">
+      <div id="cd-hours" class="cd-number">--</div>
+      <div class="cd-label">Hours</div>
+    </div>
+
+    <div class="cd-box">
+      <div id="cd-mins" class="cd-number">--</div>
+      <div class="cd-label">Minutes</div>
+    </div>
+
+    <div class="cd-box">
+      <div id="cd-secs" class="cd-number">--</div>
+      <div class="cd-label">Seconds</div>
+    </div>
+  </div>
+</section>
+
+<audio id="bg-music" loop>
+  <source src="Thaimai.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+    <div class="details">
+      <div class="detail-box">
+        <strong>Baby Shower Celebration</strong>
+        Sunday, 22 March 2026<br>
+        10:30 AM
+      </div>
+
+      <div class="detail-box">
+          <strong>Venue</strong>
+          <span>
+            <a href="https://www.google.com/maps/place/KPR+Mahal/@9.9291225,78.0974905,17.71z/data=!4m10!1m2!2m1!1skpr+mahal!3m6!1s0x3b00cf88ef45c273:0x2d0f9c32d39004e!8m2!3d9.9298054!4d78.0998815!15sCglrcHIgbWFoYWySARJtYXJyaWFnZV9jZWxlYnJhbnTgAQA!16s%2Fg%2F11f650hr4w?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+              KPR Mahal<br>
+              Harvey Nagar,<br>
+              Arappalayam,<br> Madurai-625016
+            </a>
+          </span>
+      </div>
+  </div>
+
+  <div class="qr-section">
+        <p class="text-center"><em>Scan for Google Maps Location</em></p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://maps.app.goo.gl/bANe7sZfQvVNiezBA" alt="Venue QR Code" class="mx-auto">
+  </div>
+
+  <div class="footer">
+      “A little blessing is on the way,  
+      let’s shower love on this special day.”
+    </div>
+</main>
+
+<script>
+const envelope = document.getElementById("envelope");
+const screen = document.getElementById("envelopeScreen");
+const card = document.getElementById("inviteCard");
+
+envelope.addEventListener("click", () => {
+      envelope.classList.add("open");
+
+      bgMusic.volume = 0.5;
+      bgMusic.play();
+
+      setTimeout(() => {
+        screen.classList.add("fade-out");
+        setTimeout(() => {
+          screen.style.display = "none";
+          card.classList.remove("hidden");
+        }, 1000);
+      }, 1000);
+    });
+
+
+    // Music Part
+  const bgMusic = document.getElementById("bg-music");
+  //bgMusic.volume = 0.4; // softer background
+
+  // Try autoplay muted
+  bgMusic.muted = true;
+  bgMusic.play().then(() => {
+    // If autoplay worked, unmute after 1s
+    setTimeout(() => bgMusic.muted = false, 1000);
+  }).catch(() => {
+    // If blocked, wait for first tap/click/touch
+    const startMusic = () => {
+      bgMusic.muted = false;
+      //bgMusic.play();
+      document.removeEventListener("click", startMusic);
+      document.removeEventListener("touchstart", startMusic);
+    };
+    document.addEventListener("click", startMusic);
+    document.addEventListener("touchstart", startMusic);
+  });
+
+    // Petals Color
+    const colors = ['#fff6f7', '#fce4e1', '#ffe4e1', '#f8e6f0'];
+    const body = document.body;
+
+    // Optional: JS to generate more petals dynamically 
+    for (let i = 0; i < 20; i++) {
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      petal.style.left = Math.random() * 100 + '%';
+      petal.style.top = -10 - Math.random() * 20 + '%';
+      petal.style.width = 10 + Math.random() * 12 + 'px';
+      petal.style.height = 10 + Math.random() * 12 + 'px';
+      petal.style.animationDuration = 8 + Math.random() * 6 + 's';
+      petal.style.background = `radial-gradient(circle at 30% 30%, ${colors[Math.floor(Math.random() * colors.length)]} 10%, #c9a227 60%)`;
+      petal.style.transform = `rotate(${Math.random()*360}deg)`;
+      body.appendChild(petal);
+    }
+
+//Countdown
+document.addEventListener("DOMContentLoaded", function(){
+
+  const eventTime = new Date('2026-03-22T10:30:00+05:30').getTime();
+
+  const ids = {
+    d: 'cd-days',
+    h: 'cd-hours',
+    m: 'cd-mins',
+    s: 'cd-secs'
+  };
+
+  const format = v => String(v).padStart(2,'0');
+
+  function updateCountdown(){
+    const now = Date.now();
+    let diff = Math.max(0, eventTime - now);
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    diff -= days*(1000*60*60*24);
+
+    const hours = Math.floor(diff / (1000*60*60));
+    diff -= hours*(1000*60*60);
+
+    const mins = Math.floor(diff / (1000*60));
+    diff -= mins*(1000*60);
+
+    const secs = Math.floor(diff / 1000);
+
+    document.getElementById(ids.d).textContent = days;
+    document.getElementById(ids.h).textContent = format(hours);
+    document.getElementById(ids.m).textContent = format(mins);
+    document.getElementById(ids.s).textContent = format(secs);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+});
+</script>
+
+</body>
+</html>
